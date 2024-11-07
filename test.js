@@ -2,10 +2,8 @@ const textbox = document.getElementById('ranter');
 const button = document.getElementById('ranter_sender');
 button.addEventListener('click', () => {
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", "https://cs-api.pltw.org/rant");
-  xhr.send(JSON.stringify({
-    text: textbox.value, 
-  }));
+  xhr.open("POST", "https://cs-api.pltw.org/rant?text=".concat(encodeURIComponent(textbox.value)));
+  xhr.send();
   xhr.responseType = "json";
   xhr.onload = () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
