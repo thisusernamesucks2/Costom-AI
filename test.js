@@ -1,5 +1,5 @@
 const textbox = document.getElementById('ranter');
-const button = document.getElementById('myButton');
+const button = document.getElementById('ranter_sender');
 button.addEventListener('click', () => {
   const xhr = new XMLHttpRequest();
   xhr.open("POST", "https://cs-api.pltw.org/question?text=test");
