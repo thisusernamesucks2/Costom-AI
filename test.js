@@ -1,4 +1,4 @@
-const textbox = document.getElementById('myTextbox');
+const textbox = document.getElementById('ranter');
 const button = document.getElementById('myButton');
 button.addEventListener('click', () => {
   const xhr = new XMLHttpRequest();
