@@ -9,8 +9,8 @@ button.addEventListener('click', async () => {
       mode: "no-cors",
       headers: {
         "Content-Type": "application/json",
-        "text": textbox.value
       },
+      body: JSON:stringify({ text: textbox.value }),
     });
     if (response.status !== 200) {
       const fallresponse = await fetch(fallback, {
