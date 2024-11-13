@@ -1,7 +1,7 @@
 const textbox = document.getElementById('ranter');
 const button = document.getElementById('ranter_sender');
 button.addEventListener('click', async () => {
-  const baseurl = "https://cs-api.pltw.org/rant";
+  const baseurl = "https://cs-api.pltw.org/rant?text=";
   const url = baseurl + encodeURIComponent(textbox.value);
   const fallback = "https://cs-api.pltw.org/newuser/rant";
   try {
