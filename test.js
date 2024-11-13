@@ -1,6 +1,6 @@
 const textbox = document.getElementById('ranter');
 const button = document.getElementById('ranter_sender');
-button.addEventListener('click', () => {
+button.addEventListener('click', async () => {
   const url = "https://cs-api.pltw.org/rant"
   const fallback = "https://cs-api.pltw.org/newuser/rant"
   try {
