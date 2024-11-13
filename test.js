@@ -6,6 +6,7 @@ button.addEventListener('click', async () => {
   try {
     const response = await fetch(url, {
       method: "POST",
+      mode: "cors",
       headers: {
         "Content-Type": "application/json",
         "text": textbox.value
@@ -14,6 +15,7 @@ button.addEventListener('click', async () => {
     if (response.status !== 200) {
       const fallresponse = await fetch(fallback, {
         method: "POST",
+        mode: "cors",
         headers: {
           "Content-Type": "application/json",
         },
