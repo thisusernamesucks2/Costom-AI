@@ -1,7 +1,8 @@
 const textbox = document.getElementById('ranter');
 const button = document.getElementById('ranter_sender');
 button.addEventListener('click', async () => {
-  const url = "https://cs-api.pltw.org/rant"
+  const baseurl = "https://cs-api.pltw.org/rant
+  const url = '${baseurl}?text=${encodeURIComponent(textbox.value)}';
   const fallback = "https://cs-api.pltw.org/newuser/rant"
   try {
     const response = await fetch(url, {
@@ -10,7 +11,6 @@ button.addEventListener('click', async () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ text: textbox.value }),
     });
     if (response.status !== 200) {
       const fallresponse = await fetch(fallback, {
