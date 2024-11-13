@@ -19,5 +19,7 @@ button.addEventListener('click', async () => {
         },
       });
     }
+  } catch (error) {
+    console.error("ERROR:", error);
   }
 });
