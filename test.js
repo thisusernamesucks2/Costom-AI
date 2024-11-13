@@ -2,7 +2,7 @@ const textbox = document.getElementById('ranter');
 const button = document.getElementById('ranter_sender');
 button.addEventListener('click', async () => {
   const baseurl = "https://cs-api.pltw.org/rant;
-  const url = "${baseurl}?text=${encodeURIComponent(textbox.value)}";
+  const url = baseurl + encodeURIComponent(textbox.value);
   const fallback = "https://cs-api.pltw.org/newuser/rant";
   try {
     const response = await fetch(url, {
