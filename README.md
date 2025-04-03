@@ -45,7 +45,10 @@ button.addEventListener('click', async () => {
 				"Content-Type": "application/json",
 			  },
 			})
-	});
+	} catch (error) {
+    console.error("ERROR:", error);
+  }
+});
 	</script>
   </body>
 </html>
